@@ -4,12 +4,12 @@ import {BrowserRouter} from 'react-router-dom';
 import Header from './components/Header';
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
-const generateClassname = createGenerateClassName({productionPrefix: 'co'});
+const generateClassName = createGenerateClassName({productionPrefix: 'co'});
 
 export default () => {
   return (
     <BrowserRouter>
-    <StylesProvider generateClassname={generateClassname}>
+    <StylesProvider generateClassName={generateClassName}>
     <div>
       <Header/>
       <hr />
