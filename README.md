@@ -1,3 +1,3 @@
 # mfe
 
-repo for learning microfrontends architecture, webpack, moduleFederationPlugin, github actions ci and other stuff, nothing interesting inside just config files
+repo for learning microfrontends architecture, webpack, moduleFederationPlugin and deploying all this stuff via github actions cito AWS S3, nothing interesting inside just config files
