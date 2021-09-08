@@ -18,9 +18,8 @@ export default ({onSignIn}) => {
       }
     },
     onSignIn:  () =>{
-        console.log('singned in')
         onSignIn();
-    }
+    },
 });
 
     history.listen(onParentNavigate)

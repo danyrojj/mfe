@@ -17,12 +17,12 @@ export default () => {
     <BrowserRouter>
     <StylesProvider generateClassName={generateClassName}>
     <div>
-      <Header/>
+      <Header isSignedIn={isSignedIn} onSignOut={()=>setIsSignedIn(false)}/>
       <hr />
       <Suspense fallback={<Progress></Progress>}>
     <Switch>
       <Route path="/auth">
-        <AuthLazy onSignOut={()=>setIsSignedIn(false)} onSignIn={()=>setIsSignedIn(true)}></AuthLazy>
+        <AuthLazy  onSignIn={()=>setIsSignedIn(true)}></AuthLazy>
       </Route>
       <Route path="/" component={MarketingLazy} />
     </Switch>
