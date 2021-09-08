@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createMemoryHistory,createBrowserHistory } from 'history';
 // Mount function to start up the app
-const mount = (el,  {onNavigate, defaultHistory, initialPath}) => {
+const mount = (el,  {onNavigate, defaultHistory, initialPath, onSingnIn}) => {
   const history = defaultHistory || createMemoryHistory({
     initialEntries :[initialPath]
   });
@@ -12,7 +12,7 @@ const mount = (el,  {onNavigate, defaultHistory, initialPath}) => {
   history.listen(onNavigate)
   }
 
-  ReactDOM.render(<App history={history} />, el);
+  ReactDOM.render(<App onSingnIn={onSingnIn} history={history} />, el);
 
   return {
     onParentNavigate: ({pathname:nextPathName})=> {
