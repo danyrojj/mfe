@@ -2,7 +2,7 @@ import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default ({onSingIn}) => {
+export default ({onSignIn}) => {
   const ref = useRef(null);
   const history= useHistory();
 
@@ -17,9 +17,9 @@ export default ({onSingIn}) => {
       history.push(nextPathName)
       }
     },
-    onSingIn:  () =>{
+    onSignIn:  () =>{
         console.log('singned in')
-        onSingIn();
+        onSignIn();
     }
 });
 
